@@ -20,9 +20,19 @@
     <div class="wrapper-review">
       <h3 class="text-align">Add a review to <%= @restaurant.name %></h3>
       <%= simple_form_for([@restaurant, @review]) do |f|%>
-      <%= f.input :content %>
-      <%= f.input :rating %>
-      <%= f.submit %>
+        <%= f.error_notification %>
+        <% if @review.errors.any? %>
+          <div id="error_explanation">
+            <ul>
+            <% @reviews.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <%= f.input :content %>
+        <%= f.input :rating %>
+        <%= f.submit "Add a review", class:'button-main' %>
       <% end %>
     </div>
 
