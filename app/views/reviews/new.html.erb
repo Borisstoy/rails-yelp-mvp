@@ -1,0 +1,10 @@
+<div class="main-wrapper">
+  <div class="wrapper-skinny">
+    <h1 class="text-align">Ajouter une revue <%= @restaurant.name %></h1>
+    <%= simple_form_for([@restaurant, @review]) do |f|%>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

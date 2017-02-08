@@ -1,0 +1,32 @@
+<div class="main-banner">
+  <div class="wrapper-intro">
+    <h1>The best <br> restaurants in town.</h1>
+  </div>
+</div>
+
+  <div class="wrapper-skinny add-button">
+    <%= link_to "Add a restaurant", new_restaurant_path, class:'button-main' %>
+  </div>
+
+  <div class="wrapper-skinny">
+    <% @restaurants.each do |restaurant| %>
+    <div class="wrapper-restaurants">
+        <div class="rest-name">
+         <%= link_to restaurant.name, restaurant, class:'title-rest' %>
+        </div>
+        <div class="rest-address">
+          <%= restaurant.address %>
+        </div>
+        <div class="rest-phone">
+          <%= restaurant.phone_number %>
+        </div>
+        <div class="rest-category">
+          <%= restaurant.category %>
+        </div>
+        <div class="rest-ratings">
+          <%= restaurant.average_ratings %>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
