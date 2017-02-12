@@ -1,5 +1,25 @@
 .resto-description {
   margin: 4rem 0 4rem 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  ul {
+    list-style: none;
+  }
+  .labels-show {
+    flex: 0 0 auto;
+    #list-labels {
+      margin: 0;
+      padding: 0;
+      font-weight: 300;
+    }
+  }
+  .dynamic-content {
+    flex: 0 0 auto;
+    #list-dynamic {
+      margin-left: 2rem;
+    }
+  }
 }
 
 .wrapper-review {
@@ -9,20 +29,33 @@
 
 .reviews {
   margin: 2rem 0 2rem 0;
-
+  .header-reviews {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: .8em;
+    margin-bottom: 1.5rem;
+    .comments-header {
+      flex: 0 0 60%;
+    }
+    .ratings-header {
+      flex: 0 0 40%;
+    }
+  }
+  .reviews-wrapper {
+    display: flex;
+    margin-bottom: 1rem;
+    .reviews-content {
+      flex: 0 0 60%;
+    }
+    .reviews-rating {
+      flex: 0 0 40%;
+    }
+  }
 }
 
 .action-buttons-show {
   margin: 4rem 0;
-  display: flex;
-  .action-back {
-    justify-content: center;
-    align-items: center;
-  }
-  .action-add-review {
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 
